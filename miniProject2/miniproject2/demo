@@ -1,0 +1,26 @@
+Run the MongoDB correctly in the native case. – 10 points
+	sudo mongod --bind_ip=0.0.0.0 &
+Run the web server correctly in the native case. – 10 points
+	cd miniproject2
+	python3 run.py
+The live chat service can be accessed externally (using browsers) – 5 points
+	external_ip:8080
+Run the MongoDB correctly in the container case. – 10 points
+	
+Run the web server correctly in the container case. – 10 points
+
+The live chat service can be accessed externally (using browsers) – 5 points
+
+Deploy the MongoDB object correctly in the miniKube case. – 10 points
+	sudo chmod -R 777 data/
+Deploy the MongoDB service object correctly in the miniKube case. – 10 points
+	minikube start
+	alias kubectl="minikube kubectl --"
+	minikube docker-env
+	eval $(minikube -p minikube docker-env)
+Deploy the web server object correctly in the miniKube case. – 10 points
+
+Deploy the web server service object correctly in the miniKube case. – 10 points
+
+The live chat service can be accessed externally (using browsers) – 10 points
+	kubectl port-forward --address 0.0.0.0 service/web-service 8080:8080	
